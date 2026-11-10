@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clínica Horizonte Odontologia — Projeto Demonstrativo da Prisma</title>
+  
+  <!-- Google Fonts: Manrope -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Link de acessibilidade para salto de conteúdo -->
+  <a href="#abertura" class="skip-link">Pular para o conteúdo principal</a>
+
+  <!-- 1. CABEÇALHO -->
+  <header class="site-header">
+    <div class="container header-container">
+      <div class="brand-block">
+        <span class="site-title">Clínica Horizonte Odontologia</span>
+        <span class="demo-badge">Projeto demonstrativo da Prisma — clínica fictícia.</span>
+      </div>
+      <nav class="site-nav" aria-label="Navegação principal">
+        <ul class="nav-list">
+          <li><a href="#servicos" class="nav-link">Serviços</a></li>
+          <li><a href="#sobre" class="nav-link">Sobre</a></li>
+          <li><a href="#atendimento" class="nav-link">Atendimento</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- 2. ABERTURA -->
+    <section class="section section-hero" id="abertura" aria-labelledby="hero-title">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <h1 id="hero-title" class="hero-title">Cuidados odontológicos para o seu dia a dia</h1>
+          <p class="hero-description">Explore uma apresentação de serviços odontológicos e veja como funcionaria o contato em um site de clínica.</p>
+          <div class="action-group">
+            <button type="button" class="btn btn-primary" id="btn-hero">Solicitar atendimento</button>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <img src="images/clinica-ambiente-abertura.jpg" alt="Ambiente odontológico contemporâneo ilustrativo" width="1376" height="768" class="hero-img" loading="eager" decoding="async">
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. SERVIÇOS -->
+    <section class="section section-servicos" id="servicos" aria-labelledby="servicos-title">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="servicos-title" class="section-title">Conheça os serviços</h2>
+          <p class="section-intro">Exemplos de cuidados odontológicos que podem fazer parte do atendimento em uma clínica.</p>
+        </header>
+        <div class="services-grid">
+          <!-- Cartão 1 -->
+          <article class="service-card">
+            <div class="card-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2C8.5 2 6.5 4.5 6.5 8c0 3.8 2 7.2 3.5 11.2.4 1.1 1.2 1.8 2 1.8s1.6-.7 2-1.8C15.5 15.2 17.5 11.8 17.5 8c0-3.5-2-6-5.5-6z"/>
+                <path d="M10 8c.5-1.2 1.2-1.8 2-1.8"/>
+              </svg>
+            </div>
+            <h3 class="card-title">Avaliação odontológica</h3>
+            <p class="card-text">Análise da saúde bucal para orientar os cuidados necessários.</p>
+          </article>
+
+          <!-- Cartão 2 -->
+          <article class="service-card">
+            <div class="card-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+                <path d="M12 8.5v4.5"/>
+                <path d="M12 13a2 2 0 0 0 2-2"/>
+              </svg>
+            </div>
+            <h3 class="card-title">Limpeza e cuidados preventivos</h3>
+            <p class="card-text">Cuidados voltados à higiene e à prevenção de problemas bucais.</p>
+          </article>
+
+          <!-- Cartão 3 -->
+          <article class="service-card">
+            <div class="card-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <path d="M12 8v8"/>
+                <path d="M8 12h8"/>
+              </svg>
+            </div>
+            <h3 class="card-title">Restaurações</h3>
+            <p class="card-text">Tratamentos para recuperar dentes afetados por cáries ou outros danos.</p>
+          </article>
+
+          <!-- Cartão 4 -->
+          <article class="service-card">
+            <div class="card-icon" aria-hidden="true">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4z"/>
+                <path d="M19 3l.8 2.2L22 6l-2.2.8L19 9l-.8-2.2L16 6l2.2-.8z"/>
+              </svg>
+            </div>
+            <h3 class="card-title">Clareamento dental</h3>
+            <p class="card-text">Procedimento para clarear os dentes, indicado após avaliação odontológica.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. SOBRE A CLÍNICA -->
+    <section class="section section-sobre" id="sobre" aria-labelledby="sobre-title">
+      <div class="container sobre-container">
+        <div class="sobre-visual">
+          <img src="images/clinica-ambiente-sobre.jpg" alt="Detalhe de instrumentos odontológicos ilustrativos" width="1200" height="896" class="sobre-img" loading="lazy" decoding="async">
+        </div>
+        <div class="sobre-content">
+          <h2 id="sobre-title" class="section-title">Um espaço para cuidar da saúde bucal</h2>
+          <p class="section-text">Nesta página demonstrativa, a Clínica Horizonte Odontologia representa uma proposta de atendimento voltada à saúde bucal e à orientação dos pacientes.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. INFORMAÇÕES DE ATENDIMENTO -->
+    <section class="section section-atendimento" id="atendimento" aria-labelledby="atendimento-title">
+      <div class="container">
+        <header class="section-header">
+          <h2 id="atendimento-title" class="section-title">Informações para contato</h2>
+          <p class="section-intro">Os dados abaixo são campos demonstrativos e não correspondem a uma clínica real.</p>
+        </header>
+        <div class="info-panel">
+          <div class="info-item">
+            <span class="info-label">Endereço fictício:</span>
+            <span class="info-value">[campo demonstrativo]</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Horários fictícios:</span>
+            <span class="info-value">[campo demonstrativo]</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Contato fictício:</span>
+            <span class="info-value">[campo demonstrativo]</span>
+          </div>
+        </div>
+        <div class="action-group atendimento-action">
+          <button type="button" class="btn btn-primary" id="btn-contato">Solicitar atendimento</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. CHAMADA FINAL -->
+    <section class="section section-chamada" id="chamada-final" aria-labelledby="chamada-title">
+      <div class="container chamada-container">
+        <div class="chamada-content">
+          <h2 id="chamada-title" class="chamada-title">Quer saber mais sobre o atendimento?</h2>
+          <p class="chamada-support">Em um site real, este seria o ponto de contato para conversar sobre suas necessidades de saúde bucal.</p>
+        </div>
+        <div class="action-group chamada-action">
+          <button type="button" class="btn btn-primary" id="btn-final">Solicitar atendimento</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 7. RODAPÉ -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-col-main">
+        <span class="footer-title">Clínica Horizonte Odontologia</span>
+      </div>
+      <div class="footer-col-tag">
+        <p class="footer-tag">Projeto demonstrativo da Prisma — clínica fictícia.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

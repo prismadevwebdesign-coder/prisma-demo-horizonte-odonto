@@ -1,0 +1,673 @@
+/* ==========================================================================
+   Variáveis e Paleta de Cores (Clínica Horizonte Odontologia)
+   ========================================================================== */
+:root {
+  /* Cores obrigatórias */
+  --color-fundo-principal: #FAFAF8;      /* Branco quente */
+  --color-titulos-rodape: #17324D;       /* Azul profundo */
+  --color-botoes-links: #165C70;         /* Azul-petróleo */
+  --color-botoes-links-hover: #114959;   /* Hover discreto e elegante */
+  --color-fundo-suave: #DDEFF1;          /* Azul-água claro */
+  --color-cartoes: #FFFFFF;              /* Branco */
+  --color-texto-secundario: #526575;     /* Cinza azulado */
+  --color-foco-teclado: #A9D9E0;         /* Azul-claro de destaque */
+
+  /* Cores auxiliares de contraste e borda */
+  --color-texto-principal: #1A2833;      /* Texto de leitura com contraste ideal */
+  --color-borda-fina: #C7DEE2;           /* Borda sutil e elegante */
+  --color-branco-puro: #FFFFFF;
+
+  /* Tipografia: Manrope com fallback sans-serif */
+  --font-family-base: 'Manrope', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+  /* Espaçamentos e limites estruturais */
+  --max-width-site: 1200px;
+  --spacing-section-mobile: 60px;
+  --spacing-section-desktop: 88px;       /* Faixa entre 72px e 96px */
+  --padding-lateral-mobile: 24px;        /* Margem lateral de 24px no mobile */
+  --padding-lateral-desktop: 32px;
+}
+
+/* ==========================================================================
+   Reset e Configuração Global
+   ========================================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font-family-base);
+  font-size: 100%;
+  color: var(--color-texto-principal);
+  background-color: var(--color-fundo-principal);
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-fundo-principal);
+  color: var(--color-texto-principal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Link de salto para acessibilidade */
+.skip-link {
+  position: absolute;
+  top: -120px;
+  left: 24px;
+  background-color: var(--color-botoes-links);
+  color: var(--color-branco-puro);
+  padding: 12px 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  z-index: 9999;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus-visible {
+  top: 20px;
+  outline: 3px solid var(--color-foco-teclado);
+  outline-offset: 3px;
+}
+
+/* ==========================================================================
+   Containers e Estrutura de Layout (Max-width 1200px)
+   ========================================================================== */
+.container {
+  width: 100%;
+  max-width: var(--max-width-site);
+  margin-inline: auto;
+  padding-inline: var(--padding-lateral-mobile);
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-inline: var(--padding-lateral-desktop);
+  }
+}
+
+.section {
+  padding-block: var(--spacing-section-mobile);
+  scroll-margin-top: 2rem;
+}
+
+@media (min-width: 900px) {
+  .section {
+    padding-block: var(--spacing-section-desktop);
+  }
+}
+
+.section-header {
+  margin-bottom: 2.25rem;
+}
+
+.section-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-titulos-rodape);
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 2.25rem;
+  }
+}
+
+.section-intro {
+  font-size: 1.0625rem;
+  color: var(--color-texto-secundario);
+  line-height: 1.6;
+  max-width: 65ch;
+}
+
+.section-text {
+  font-size: 1.0625rem;
+  color: var(--color-texto-secundario);
+  line-height: 1.75;
+}
+
+@media (min-width: 768px) {
+  .section-text {
+    font-size: 1.1875rem;
+  }
+}
+
+/* ==========================================================================
+   Botões e Controles Interativos
+   ========================================================================== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  min-width: 48px;
+  padding: 0.8125rem 1.875rem;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.25;
+  text-align: center;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn-primary {
+  background-color: var(--color-botoes-links);
+  color: var(--color-branco-puro);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-botoes-links-hover);
+}
+
+.btn-primary:focus {
+  outline: none;
+}
+
+.btn-primary:focus-visible {
+  outline: 3px solid var(--color-foco-teclado);
+  outline-offset: 3px;
+}
+
+.action-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+@media (max-width: 639px) {
+  .action-group .btn {
+    width: 100%;
+  }
+}
+
+/* Feedback textual demonstrativo gerado pelo JavaScript */
+.demo-feedback {
+  margin-top: 0.875rem;
+  padding: 0.875rem 1.125rem;
+  background-color: var(--color-fundo-suave);
+  color: var(--color-titulos-rodape);
+  border-left: 4px solid var(--color-botoes-links);
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.45;
+  width: 100%;
+  max-width: 520px;
+  opacity: 0;
+  transform: translateY(-4px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.demo-feedback.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==========================================================================
+   1. Cabeçalho (Fundo branco, sem position: fixed, sem hambúrguer)
+   ========================================================================== */
+.site-header {
+  background-color: var(--color-cartoes);
+  border-bottom: 1px solid var(--color-borda-fina);
+  padding-block: 1.25rem;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .header-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+  }
+}
+
+.brand-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+}
+
+.site-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-titulos-rodape);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.demo-badge {
+  font-size: 0.8125rem;
+  color: var(--color-texto-secundario);
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+.site-nav {
+  display: block;
+}
+
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1.25rem;
+  list-style: none;
+}
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  min-width: 48px;
+  padding: 0.5rem 0.5rem;
+  color: var(--color-botoes-links);
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 4px;
+  border-radius: 6px;
+  transition: text-decoration-thickness 0.15s ease, color 0.15s ease;
+}
+
+.nav-link:hover {
+  color: var(--color-botoes-links-hover);
+  text-decoration-thickness: 3px;
+}
+
+.nav-link:focus {
+  outline: none;
+}
+
+.nav-link:focus-visible {
+  outline: 3px solid var(--color-foco-teclado);
+  outline-offset: 3px;
+}
+
+/* ==========================================================================
+   2. Abertura (#abertura, Fundo: #FAFAF8)
+   ========================================================================== */
+.section-hero {
+  background-color: var(--color-fundo-principal);
+}
+
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+}
+
+@media (min-width: 900px) {
+  .hero-container {
+    display: grid;
+    grid-template-columns: 45% 1fr;
+    align-items: center;
+    gap: 3.5rem;
+  }
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-titulos-rodape);
+  line-height: 1.18;
+  letter-spacing: -0.025em;
+  margin-bottom: 1.125rem;
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 2.75rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-title {
+    font-size: 3.125rem;
+  }
+}
+
+.hero-description {
+  font-size: 1.0625rem;
+  color: var(--color-texto-secundario);
+  line-height: 1.65;
+  margin-bottom: 2rem;
+  max-width: 48ch;
+}
+
+.hero-visual {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 14px;
+  border: 1px solid var(--color-borda-fina);
+  object-fit: cover;
+  aspect-ratio: 4 / 3;
+}
+
+@media (min-width: 900px) {
+  .hero-img {
+    aspect-ratio: 3 / 2;
+  }
+}
+
+/* ==========================================================================
+   3. Serviços (#servicos, Fundo: #DDEFF1, cartões max-width 1200px)
+   ========================================================================== */
+.section-servicos {
+  background-color: var(--color-fundo-suave);
+  border-top: 1px solid var(--color-borda-fina);
+  border-bottom: 1px solid var(--color-borda-fina);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+}
+
+@media (min-width: 600px) {
+  .services-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 992px) {
+  .services-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+.service-card {
+  background-color: var(--color-cartoes);
+  border: 1px solid var(--color-borda-fina);
+  border-radius: 12px;
+  padding: 1.875rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  cursor: default;
+}
+
+.card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background-color: var(--color-fundo-suave);
+  color: var(--color-botoes-links);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-titulos-rodape);
+  line-height: 1.3;
+  margin-bottom: 0.625rem;
+  text-align: left;
+}
+
+.card-text {
+  font-size: 0.9375rem;
+  color: var(--color-texto-secundario);
+  line-height: 1.6;
+  text-align: left;
+}
+
+/* ==========================================================================
+   4. Sobre (#sobre, Fundo: #FAFAF8)
+   ========================================================================== */
+.section-sobre {
+  background-color: var(--color-fundo-principal);
+}
+
+.sobre-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+}
+
+@media (min-width: 900px) {
+  .sobre-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 4rem;
+  }
+}
+
+.sobre-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* No mobile: Texto primeiro, Imagem depois. No desktop: Imagem à esquerda, Texto à direita */
+@media (min-width: 900px) {
+  .sobre-visual {
+    order: 1;
+  }
+  .sobre-content {
+    order: 2;
+  }
+}
+
+.sobre-visual {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.sobre-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid var(--color-borda-fina);
+  display: block;
+}
+
+/* ==========================================================================
+   5. Atendimento (#atendimento, Fundo: #FAFAF8)
+   ========================================================================== */
+.section-atendimento {
+  background-color: var(--color-fundo-principal);
+  border-top: 1px solid var(--color-borda-fina);
+}
+
+.info-panel {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+  margin-bottom: 2.25rem;
+}
+
+@media (min-width: 768px) {
+  .info-panel {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+  }
+}
+
+.info-item {
+  background-color: var(--color-cartoes);
+  border: 1px solid var(--color-borda-fina);
+  border-radius: 12px;
+  padding: 1.75rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  cursor: default;
+}
+
+.info-label {
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: var(--color-titulos-rodape);
+  line-height: 1.35;
+}
+
+.info-value {
+  font-size: 1rem;
+  color: var(--color-texto-secundario);
+  line-height: 1.5;
+}
+
+.atendimento-action {
+  margin-top: 0.5rem;
+}
+
+/* ==========================================================================
+   6. Chamada Final (#chamada-final, Fundo: #DDEFF1)
+   ========================================================================== */
+.section-chamada {
+  background-color: var(--color-fundo-suave);
+  border-top: 1px solid var(--color-borda-fina);
+  border-bottom: 1px solid var(--color-borda-fina);
+}
+
+.chamada-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.75rem;
+}
+
+@media (min-width: 900px) {
+  .chamada-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3.5rem;
+  }
+
+  .chamada-content {
+    flex: 1;
+    max-width: 650px;
+  }
+
+  .chamada-action {
+    flex: 0 0 auto;
+    min-width: 280px;
+  }
+}
+
+.chamada-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-titulos-rodape);
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.625rem;
+}
+
+@media (min-width: 768px) {
+  .chamada-title {
+    font-size: 2.125rem;
+  }
+}
+
+.chamada-support {
+  font-size: 1.0625rem;
+  color: var(--color-texto-secundario);
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   7. Rodapé (Fundo: #17324D)
+   ========================================================================== */
+.site-footer {
+  margin-top: auto;
+  background-color: var(--color-titulos-rodape);
+  color: var(--color-fundo-suave);
+  padding-block: 3rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .footer-container {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.footer-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-branco-puro);
+  letter-spacing: -0.015em;
+  line-height: 1.2;
+}
+
+.footer-tag {
+  font-size: 0.875rem;
+  color: var(--color-fundo-suave);
+  line-height: 1.5;
+}
+
